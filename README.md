@@ -1,51 +1,58 @@
-# J.A.C.S
+### J.A.C.S
+
 Sorry for the wierdness. This entire thing is literaly twodays of work
 
-Just Another Competitive Scorer. It takes input, filters the files to be checked, and Scores them on Ten
-This is Command Line Program based, built bu using python 3.4
+Just Another Competitive Scorer. It takes input, filters the files to be checked, and Scores them on Ten.
+
+This is Command Line Program based, built by using python 3.4
+
 For best usage, run with python3
 TODO: 
-  1)  TESTING
-      LOTS AND LOTS OF TESTING
-      NOT AT ALL TESTED
-  2)  MAKE AN EXECUTABLE AFTER CHECKING PROs AND CONs
-  3)  ADD SUPPORT FOR MORE LANGUAGES (MAYBE)
-  4)  MAKE A BETTER DIFF FUNCTION (IT SUCKS AF)
-  4)  SUGGESTIONS
+1.  TESTING
+    LOTS AND LOTS OF TESTING
+    NOT AT ALL TESTED
+2.  MAKE AN EXECUTABLE AFTER CHECKING PROs AND CONs
+3.  ADD SUPPORT FOR MORE LANGUAGES (MAYBE)
+4.  MAKE A BETTER DIFF FUNCTION (IT SUCKS AF)
+5.  SUGGESTIONS
 
 It is not an executable yet. (See todo)
 
 Dependencies:
 
-exrex: A module to give random strings, given a regex. Required if input is going to be regex
-        https://github.com/asciimoo/exrex
+*exrex:* A module to give random strings, given a regex. Required if input is going to be regex https://github.com/asciimoo/exrex
   
-subprocess32: A module to port python3's builtin subprocess to python2.x. Required for ONLY for python2.x
+*subprocess32:* A module to port python3's builtin subprocess to python2.x. Required for ONLY for python2.x
 
-Supports: C,C++,Java,Python 2.x
+*Supports:* C,C++,Java,Python 2.x
 
-Notes: The input generator and correct answer can be in any of the supported lnguages
-       For regex input exrex is a must
-       Default timeout incase of infinite loops is 5 sec (Can be changed. See optional argument -tm)
-       In case of regex input, number of test cases defaults to 100. (changable. See -ntl,-tl)
-       WARNING Will check all ALL FILES if -ckf is not given (See optional argument -ckf)
+*Notes:* 
+-The input generator and correct answer can be in any of the supported lnguages
+-For regex input exrex is a must
+-Default timeout incase of infinite loops is 5 sec (Can be changed. See optional argument -tm)
+-In case of regex input, number of test cases defaults to 100. (changable. See -ntl,-tl)
+-WARNING Will check all ALL FILES if -ckf is not given (See optional argument -ckf)
 
 #Documentation:
 #Required arguments:
 To be given in this order:
-
-python jacs.py  # obviously 
-
-
-correct_answer  #The correct answer file, with full path. 
-                #If just the filename is given, it is assumed to be on the current working directory
-                #Can be txt file
-                
-starting_directory #The directory path where the program will start to look for the answers. It may or may not look into                      subdirectories. (You can specify)
-
-input_file_orregex #The input generator script. Same conditions of path as correct_answer. Can be txt file.
-                    #However, the input can be regex. Strings satisfying the regex will be generated and fed as input.
-                    
+|-------------------|-----------------------------------------------------------------------------------------------------|
+|   python jacs.py  |obviously                                                                                            |
+|                   |                                                                                                     |
+|                   |                                                                                                     |
+|-------------------|-----------------------------------------------------------------------------------------------------|
+|   correct_answer  |The correct answer file, with full path.                                                             |
+|                   |If just the filename is given, it is assumed to be on the current working directory                  |
+|                   |Can be txt file                                                                                      |
+|-------------------|-----------------------------------------------------------------------------------------------------|
+|                   |                                                                                                     |
+|starting_directory |The directory path where the program will start to look for the answers. It may or may not look into | |                   |subdirectories. (You can specify)                                                                    |
+|-------------------------------------------------------------------------------------------------------------------------|
+|                   |                                                                                                     |
+|input_file_orregex |The input generator script. Same conditions of path as correct_answer. Can be txt file.              |
+|                   |However, the input can be regex. Strings satisfying the regex will be generated and fed as input.    |
+|                   |                                                                                                     |
+|-------------------------------------------------------------------------------------------------------------------------|
 #Optional Arguments: The fun and useful part  :)
 
 -sf --store_faults 
