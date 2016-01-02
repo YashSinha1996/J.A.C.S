@@ -28,17 +28,19 @@ Notes: The input generator and correct answer can be in any of the supported lng
        In case of regex input, number of test cases defaults to 100. (changable. See -ntl,-tl)
        WARNING Will check all ALL FILES if -ckf is not given (See optional argument -ckf)
 
-Documentation:
+#Documentation:
 Required arguments:
-#To be given in this order
+To be given in this order
 python jacs.py  # obviously 
+
+
 correct_answer  #The correct answer file, with full path. 
                 #If just the filename is given, it is assumed to be on the current working directory
                 #Can be txt file
                 
 starting_directory #The directory path where the program will start to look for the answers. It may or may not look into                      subdirectories. (You can specify)
 
-input_file_or_regex #The input generator script. Same conditions of path as correct_answer. Can be txt file.
+input_file_orregex #The input generator script. Same conditions of path as correct_answer. Can be txt file.
                     #However, the input can be regex. Strings satisfying the regex will be generated and fed as input.
                     
 Optional Arguments: #The fun and useful part  :)
