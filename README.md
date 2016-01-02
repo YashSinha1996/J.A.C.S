@@ -1,4 +1,6 @@
 # J.A.C.S
+Sorry for the wierdness. This entire thing is literaly twodays of work
+
 Just Another Competitive Scorer. It takes input, filters the files to be checked, and Scores them on Ten
 This is Command Line Program based, built bu using python 3.4
 For best usage, run with python3
