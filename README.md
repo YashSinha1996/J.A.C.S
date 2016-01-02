@@ -8,9 +8,13 @@ TODO:
 1.  TESTING
   LOTS AND LOTS OF TESTING
   NOT AT ALL TESTED
+
 2.  MAKE AN EXECUTABLE AFTER CHECKING PROs AND CONs
+
 3.  ADD SUPPORT FOR MORE LANGUAGES (MAYBE)
+
 4.  MAKE A BETTER DIFF FUNCTION (IT SUCKS AF)
+
 5.  SUGGESTIONS
 
 It is not an executable yet. (See todo)
@@ -25,11 +29,11 @@ Dependencies:
 *Supports:* C,C++,Java,Python 2.x
 
 *Notes:*
--The input generator and correct answer can be in any of the supported lnguages
--For regex input exrex is a must
--Default timeout incase of infinite loops is 5 sec (Can be changed. See optional argument -tm)
--In case of regex input, number of test cases defaults to 100. (changable. See -ntl,-tl)
--WARNING Will check all ALL FILES if -ckf is not given (See optional argument -ckf)
+- The input generator and correct answer can be in any of the supported lnguages
+- For regex input exrex is a must
+- Default timeout incase of infinite loops is 5 sec (Can be changed. See optional argument -tm)
+- In case of regex input, number of test cases defaults to 100. (changable. See -ntl,-tl)
+- WARNING Will check all ALL FILES if -ckf is not given (See optional argument -ckf)
 
 ##Documentation:
 #Required arguments:
