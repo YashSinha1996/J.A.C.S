@@ -1,4 +1,4 @@
-### J.A.C.S
+# J.A.C.S
 Sorry for the wierdness. This entire thing is literaly twodays of work
 
 Just Another Competitive Scorer. It takes input, filters the files to be checked, and Scores them on Ten
@@ -40,12 +40,10 @@ Dependencies:
 To be given in this order:
 - *python jacs.py*
   - Obviously 
-
 - *correct_answer*
   - The correct answer file, with full path. 
   - If just the filename is given, it is assumed to be on the current working directory
   - Can be txt file
-
 - *starting_directory* 
   - The directory path where the program will start to look for the answers. It may or may not look into subdirectories. (You can specify)
 - *input_file_orregex* 
