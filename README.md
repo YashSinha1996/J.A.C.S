@@ -14,8 +14,10 @@ TODO:
 It is not an executable yet. (See todo)
 
 Dependencies:
+
 exrex: A module to give random strings, given a regex. Required if input is going to be regex
         https://github.com/asciimoo/exrex
+  
 subprocess32: A module to port python3's builtin subprocess to python2.x. Required for ONLY for python2.x
 
 Supports: C,C++,Java,Python 2.x
