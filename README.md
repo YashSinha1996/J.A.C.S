@@ -36,6 +36,7 @@ Dependencies:
 #Documentation:
 #Required arguments:
 To be given in this order:
+| Command           |Help                                                                                                 |
 |-------------------|-----------------------------------------------------------------------------------------------------|
 |   python jacs.py  |obviously                                                                                            |
 |                   |                                                                                                     |
