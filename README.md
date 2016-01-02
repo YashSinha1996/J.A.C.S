@@ -29,8 +29,9 @@ Notes: The input generator and correct answer can be in any of the supported lng
        WARNING Will check all ALL FILES if -ckf is not given (See optional argument -ckf)
 
 #Documentation:
-Required arguments:
-To be given in this order
+#Required arguments:
+To be given in this order:
+
 python jacs.py  # obviously 
 
 
@@ -43,51 +44,84 @@ starting_directory #The directory path where the program will start to look for 
 input_file_orregex #The input generator script. Same conditions of path as correct_answer. Can be txt file.
                     #However, the input can be regex. Strings satisfying the regex will be generated and fed as input.
                     
-Optional Arguments: #The fun and useful part  :)
+#Optional Arguments: The fun and useful part  :)
 
 -sf --store_faults 
-#Flag to declare that any mistakes found in the checked file
-#(SHITTY AS AF, SEE TODO)
+
+Flag to declare that any mistakes found in the checked file
+
+(SHITTY AS AF, SEE TODO)
+
 
 -ir --is_regex
-#Declares that the input string given is a regex
+
+Declares that the input string given is a regex
+
 
 -tm TIME --timeout TIME
+
 #TIME in seconds after which to stop program execution
 
+
 -ckf --check_file N filenames
-#Will only check files having a filename as one of these, OR staisfying one of these regex (See -alreg)
+
+Will only check files having a filename as one of these, OR staisfying one of these regex (See -alreg)
+
 
 -mulm --multi_check N checkN N+m checkn+m
-#Requires -ckf to declared first. Else, will fail.
-#Filter at multiple directory levels. Ex:
-#   -mulm 1 Q1 1 Q2 2 Q2.1 
-# impilies: check files having name as Q2.5 and directory level 2,and as Q1 or Q2 at directory level 1
-# DIR_LEVEL FILTER  (See -l for info on directory levels)
+
+Requires -ckf to declared first. Else, will fail.
+
+Filter at multiple directory levels. Ex:
+
+   -mulm 1 Q1 1 Q2 2 Q2.1 
+
+ impilies: check files having name as Q2.5 and directory level 2,and as Q1 or Q2 at directory level 1
+
+ DIR_LEVEL FILTER  (See -l for info on directory levels)
+
 
 -alreg --all_regex
-#Requires -ckf to declared first. Else, will fail.
-#Implies ALL FILTERS IN -ckf and -mulm ARE REGULAR EXPRESSIONS
+
+Requires -ckf to declared first. Else, will fail.
+
+Implies ALL FILTERS IN -ckf and -mulm ARE REGULAR EXPRESSIONS
+
 
 -d --direct
-#Flag declaring that files to be checked are all within the starting_directory itself. No need to check for directory within directory
-#(Equivalent to -l 0) 
-#MUTUALLY EXCLUSIVE WITH -l (i.e, using -d and -l together is not allowed)
+
+Flag declaring that files to be checked are all within the starting_directory itself. No need to check for directory within directory
+
+(Equivalent to -l 0) 
+
+MUTUALLY EXCLUSIVE WITH -l (i.e, using -d and -l together is not allowed)
+
 
 -l LEVEL --level LEVEL
-#To look till LEVEL directory within directories.(Starting from 0)
-#i.e, -l 2 means to look in directory within directory within directory 
-#     -l 1 means to look directory within directory 
-#MUTUALLY EXCLUSIVE WITH -d (i.e, using -d and -l together is not allowed)
+
+To look till LEVEL directory within directories.(Starting from 0)
+
+i.e, -l 2 means to look in directory within directory within directory 
+     -l 1 means to look directory within directory 
+
+MUTUALLY EXCLUSIVE WITH -d (i.e, using -d and -l together is not allowed)
+
 
 -ntl --no_test_limit
-#Use with input scripts. Will check for ALL POSSIBLE IN CASE OF REGEX. USE CAREFULLY
-#Equivalent to -tl 0
-#MUTUALLY EXCLUSIVE WITH -tl (i.e, using -ntl and -tl together is not allowed)
+
+Use with input scripts. Will check for ALL POSSIBLE IN CASE OF REGEX. USE CAREFULLY
+
+Equivalent to -tl 0
+
+MUTUALLY EXCLUSIVE WITH -tl (i.e, using -ntl and -tl together is not allowed)
+
 
 -tl LIMIT --test_limit LIMIT
-#Test for LIMIT cases. First enters LIMIT in code to checked. Preferable use only with regex input.
-# Defaults to 100
-#MUTUALLY EXCLUSIVE WITH -tl (i.e, using -ntl and -tl together is not allowed)
+
+Test for LIMIT cases. First enters LIMIT in code to checked. Preferable use only with regex input.
+
+ Defaults to 100
+
+MUTUALLY EXCLUSIVE WITH -tl (i.e, using -ntl and -tl together is not allowed)
 
 DEBUGGING AND TESTING IS LEFT !!!
