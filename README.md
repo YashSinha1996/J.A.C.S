@@ -6,10 +6,9 @@ This is Command Line Program based, built bu using python 3.4
 For best usage, run with python3
 TODO: 
 1.  TESTING
-  LOTS AND LOTS OF TESTING
-  NOT AT ALL TESTED
-
 2.  MAKE AN EXECUTABLE AFTER CHECKING PROs AND CONs
+
+2. 
 
 3.  ADD SUPPORT FOR MORE LANGUAGES (MAYBE)
 
