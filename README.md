@@ -18,14 +18,11 @@ TODO:
 
 It is not an executable yet. (See todo)
 
-Dependencies:
+**Dependencies:**
 
-[*exrex:*](https://github.com/asciimoo/exrex) A module to give random strings, given a regex. Required if input is going to be regex
-
-  
-*subprocess32:* A module to port python3's builtin subprocess to python2.x. Required for ONLY for python2.x
-
-*Supports:* C,C++,Java,Python 2.x
+- [*exrex:*](https://github.com/asciimoo/exrex) A module to give random strings, given a regex. Required if input is going to be regex
+- *subprocess32:* A module to port python3's builtin subprocess to python2.x. Required for ONLY for python2.x
+- *Supports:* C,C++,Java,Python 2.x
 
 *Notes:*
 - The input generator and correct answer can be in any of the supported lnguages
