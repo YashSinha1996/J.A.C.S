@@ -35,21 +35,24 @@ Dependencies:
 - WARNING Will check all ALL FILES if -ckf is not given (See optional argument -ckf)
 
 ##Documentation:
-#Required arguments:
+
+###Required arguments:
 To be given in this order:
 - *python jacs.py*
   - Obviously 
+
 - *correct_answer*
   - The correct answer file, with full path. 
   - If just the filename is given, it is assumed to be on the current working directory
   - Can be txt file
+
 - *starting_directory* 
   - The directory path where the program will start to look for the answers. It may or may not look into subdirectories. (You can specify)
 - *input_file_orregex* 
   - The input generator script. Same conditions of path as correct_answer. Can be txt file.
   - However, the input can be regex. Strings satisfying the regex will be generated and fed as input.
-                    
-#Optional Arguments: The fun and useful part  :)
+
+###Optional Arguments: The fun and useful part  :)
 
 - *-sf* or *--store_faults* 
   - Flag to declare that any mistakes found in the checked file
