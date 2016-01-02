@@ -60,7 +60,7 @@ Declares that the input string given is a regex
 
 -tm TIME --timeout TIME
 
-#TIME in seconds after which to stop program execution
+TIME in seconds after which to stop program execution
 
 
 -ckf --check_file N filenames
