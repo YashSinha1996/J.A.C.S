@@ -84,4 +84,10 @@ if args.multi_check:
         x=[args.multi_check[index+1] for index,number in enumerate(args.multi_check) if number==str(i)]     #The next object if number mather
         multi_file_check.append(x)                                              #Yes, the append is delibrate
 
-finder.crawlDir(corr=corr,inp=inp,folder=folder,fault=args.store_faults,limit=limit,time=timeout,is_file=is_file,level=dirlevel,file_check=args.check_file,multi_check=multi_file_check,all_regex=args.all_regex)
+finder.crawlDir(corr=corr,inp=inp,folder=folder,fault=args.store_faults,limit=limit,time=args.timeout,is_file=is_file,level=dirlevel,file_check=args.check_file,multi_check=multi_file_check,all_regex=args.all_regex)
+#
+
+
+
+
+
