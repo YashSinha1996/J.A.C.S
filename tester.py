@@ -79,7 +79,7 @@ def check_compile(inp):
 		return inp
 	else:
 		return inp
-	subprocess.check_call(args,cwd=head,timeout=5)
+	subprocess.call(args,cwd=head,timeout=5)
 	return final
 	
 def check(corr,inp,folder,file_check,fault,time):
@@ -91,23 +91,30 @@ def check(corr,inp,folder,file_check,fault,time):
 	#---------------------------------------------------
 	#Code Block to find output of file_check
 	is_python=False
+
 	if ext==".c":
-		args=["gcc",tail,"-o",root+".o"]
-		final_args="./"+tail
+		args=["gcc",file_check,"-o",root+".o"]
+		final_args=["./"+tail]
 	elif ext==".cpp":
-		args=["g++",tail,"-o",root+".o"]
-		final_args="./"+tail
+		args=["g++",file_check,"-o",root+".o"]
+		final_args=["./"+tail]
 	elif ext==".java":
-		args=["javac",tail]
+		args=["javac",file_check]
 		final_args=["java",root]
 	elif ext==".py":
-		args=["python",tail]
+		args=["python",file_check]
 		final=args
 		is_python=True
+	else:
+		return (6,-1)
 	try:
 		if not is_python:
+			#print "ugo %s "% folder
+			#for arg in args:
+			#	print arg+" omom\n"
 			subprocess.call(args,cwd=folder,timeout=5)
-	except Exception(e):
+			#print "ugo"
+	except Exception:
 		if fault:
 			f=open(path.join(folder,root)+".fault.txt","w")
 			subprocess.check_call(args,stdin=inp,stdout=to_check,stderr=f,cwd=folder)
@@ -117,7 +124,7 @@ def check(corr,inp,folder,file_check,fault,time):
 		f=open(path.join(folder,root)+".fault.txt","w")
 	try:
 		p=subprocess.call(final_args,stdin=inp,stdout=to_check,stderr=f,cwd=folder,timeout=time)		
-	except Exception(e):
+	except Exception:
 		if not is_python:
 			return 2
 		return 3
@@ -126,23 +133,25 @@ def check(corr,inp,folder,file_check,fault,time):
 	executable=True
 	if not head:
 		head=os.getcwd()
-	if ext==".o":
+	if corr_ext==".o":
 		corr_args="./"+tail
-	elif ext==".class":
+	elif corr_ext==".class":
 		corr_args=["java",root]
-	elif ext==".py":
+	elif corr_ext==".py":
 		corr_args=["python",tail]
 	else:
 		executable=False
-		how=diff(corr,to_check,f)
+		how=diff(open(corr),to_check,f)
 	if executable:
+		#print "ugo"
 		p=subprocess.call(corr_args,stdin=inp,stdout=correct,cwd=head,timeout=time)
+		#print "ug5o"
 		how=diff(correct,to_check,f)
 	correct.close()
 	to_check.close()
 	return how
 
-def diff(corr,to_check):
+def diff(corr,to_check,f):
 	d=difflib.Differ()
 	result = list(d.compare(corr.readlines(), to_check.readlines()))
 	num_match=0
@@ -163,8 +172,8 @@ def diff(corr,to_check):
 	else:
 		status=1
 		score=10*(num_match//result)
-	how=(status,score)
-	return how
+	return (status,score)
+
 
 
 
