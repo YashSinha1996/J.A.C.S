@@ -37,7 +37,7 @@ To be given in this order:
   - The input generator script. Same conditions of path as correct_answer. Can be txt file.
   - However, the input can be regex. Strings satisfying the regex will be generated and fed as input.
 
-###Optional Arguments:
+### Optional Arguments:
 
 - *-sf* OR *--store_faults* 
   - Flag to declare that any mistakes found in the checked file
