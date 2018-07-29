@@ -21,9 +21,9 @@ It is not an executable yet. (See todo)
 - In case of regex input, number of test cases defaults to 100. (changable. See -ntl,-tl)
 - WARNING Will check all ALL FILES if -ckf is not given (See optional argument -ckf)
 
-##Documentation:
+## Documentation:
 
-###Required arguments:
+### Required arguments:
 To be given in this order:
 - *python jacs.py*
   - Obviously 
